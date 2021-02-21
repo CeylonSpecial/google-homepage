@@ -1,98 +1,154 @@
 <!DOCTYPE html>
 <html>
     <style>
-        h1 {
-            text-align: center;
+        .header-container {
+          font-family: Arial;
+          color: black;
+          align-items: center;
+          justify-items: center;
+          font-size: 14px;
+          height: 50px;
+          width: 100%;
+          display: grid;
+          grid-template-columns: 5% 1% 81% 3% 3% 7%
         }
-        h2 {
-            text-align: center;
+        a, a:visited, a:active {
+          color: inherit;
+          text-decoration: none;
+        } 
+        a:hover {
+          text-decoration: underline;
+        }
+        #sign-in-button { 
+          background: #4C8BF5;
+          border: 0;
+          height: 30px;
+          width: 70px;
+          color: white;
+          font-weight: bold;
+          font-f
+        }
+        h1 {
+          text-align: center;
+        }
+        h2 { 
+          text-align: center;
         }
         #search-box {
-            margin-bottom: 20px;
+          width: 600px;
+          border-radius: 50px;
+          border-width: 1px;
+          height: 40px;
+          border-color: #d9d9d9;
+          border-style: solid;
         }
-        #toolbar-right {
-            float: right;
+        #search-box:focus {
+          outline: none;
         }
-        #about-link {
-            margin-left: 20px;
-            margin-right: 20px;
+        #search-box:hover {
+          box-shadow: 0 1px 5px lightgrey;
         }
-        #images-link {
-            margin-left: 20px;
-            margin-right: 20px;
+        #google-search-button {
+          margin-top: 20px;
+          margin-right: 2px;
+          border: 0;
+          height: 40px;
+          width: 120px;
+          background: #fafafa;
         }
-        #footer-left {
-            position: fixed;
-            bottom: 0;
-            transform: translate(0%, -50%)
+        #im-feeling-lucky-button {
+          margin-top: 20px;
+          margin-left: 2px;
+          border: 0;
+          height: 40px;
+          width: 140px;
+          background: #fafafa;
         }
-        #footer-center {
-            position: fixed;
-            bottom: 0;
-            left: 50%;
-            transform: translate(-50%, -50%)
+        #google-search-button:hover {
+          cursor: pointer;
         }
-        #footer-right {
-            position: fixed;
-            bottom: 0;
-            left: 87%;
-            transform: translate(0%, -50%)
+        #im-feeling-lucky-button:hover {
+          cursor: pointer;
         }
-        #advertising-link {
-            margin-left: 20px;
+        .advertising {
         }
-        #business-link {
-            margin-left: 20px;
+        .business {
+          padding-right: 20px;
         }
-        #how-search-works-link {
-            margin-left: 20px;
+        .how-search-works {
+          justify-self: end;
         }
-        #settings-link {
-            margin-right: 20px;
+        .carbon-neutral {
+          justify-self: center;
+          align-self: center;
         }
-        #terms-link {
-            margin-right: 20px;
+        .privacy {
+          justify-self: end;
         }
-        #privacy-link {
-            margin-right: 20px;
+        .terms {
+        }
+        .settings {
+        }
+        .footer-container {
+          font-family: Arial;
+          color: #636363;
+          position: absolute;
+          bottom: 0;
+          font-size: 14px;
+          height: 50px;
+          width: 100%;
+          background: #f2f2f2;
+          display: grid;
+          grid-template-columns: 18.5% 63% 18.5%
+        }
+        .left-footer {
+          display: grid;
+          grid-template-columns: 33% 27% 33%;
+          align-items: center;
+          justify-items: center;
+        }
+        .right-footer {
+          display: grid;
+          grid-template-columns: 45% 27% 15%;
+          align-items: center;
+          justify-items: center;
         }
     </style>
-    
+      
     <header>
-        <span id="toolbar-left">
-            <a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header" id="about-link">About</a>
-            <a href="https://store.google.com/US/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a>
-        </span>
-        
-        <span id="toolbar-right">
-            <a href="https://mail.google.com/mail/u/0/?ogbl#inbox">Gmail</a>
-            <a href="https://www.google.com/imghp?hl=en&authuser=0&ogbl" id="images-link">Images</a>
-        </span>
+        <div class="header-container">
+            <div class="about"><a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a></div>
+            <div class="store"><a href="https://store.google.com/US/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a></div>
+            <div></div>
+            <div class="gmail"><a href="https://mail.google.com/mail/u/0/?ogbl#inbox">Gmail</a></div>
+            <div class="images"><a href="https://www.google.com/imghp?hl=en&authuser=0&ogbl">Images</a></div>
+            <div class="sign-in"><button type="submit" id="sign-in-button">Sign In</button>
+        </div>
     </header>
-    
+        
     <h1><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo."></h1>
-
+        
     <h2>
         <form>
             <input type="text" id="search-box"><br>
-            <button type="submit">Google Search</button>
-            <button type="submit">I'm Feeling Lucky</button>
+            <button type="submit" id="google-search-button">Google Search</button>
+            <button type="submit" id="im-feeling-lucky-button">I'm Feeling Lucky</button>
         </form>
     </h2>
-            
+      
     <footer>
-        <span id="footer-left">
-            <a href="https://ads.google.com/intl/en_us/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1#!/" id="advertising-link">Advertising</a>
-            <a href="https://smallbusiness.withgoogle.com/?subid=us-en-et-g-aw-a-g4sb_test_3c!o2&gmbsrc=us-en_US-et-z-z-gmb-s-z-r~sb-g4sb_test_3c-u&utm_content=g4sb_test_3c&utm_source=google&utm_medium=ep&utm_campaign=google_hpbfooter#!/" id="business-link">Business</a>
-            <a href="https://www.google.com/search/howsearchworks/?fg=1" id="how-search-works-link">How Search works</a>
-        </span>
-        <span id="footer-center">
-            <a href="https://sustainability.google/commitments/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content=">Carbon Neutral since 2007</a>
-        </span>
-        <span id="footer-right">
-            <a href="https://policies.google.com/privacy?hl=en&fg=1" id="privacy-link">Privacy</a>
-            <a href="https://policies.google.com/terms?hl=en&fg=1" id="terms-link">Terms</a> 
-            <a href="" id="settings-link">Settings</a>
-        </span>
+        <div class="footer-container">
+            <div class="left-footer">
+                <div class="advertising"><a href="https://ads.google.com/intl/en_us/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1#!/">Advertising</a></div>
+                <div class="business"><a href="https://smallbusiness.withgoogle.com/?subid=us-en-et-g-aw-a-g4sb_test_3c!o2&gmbsrc=us-en_US-et-z-z-gmb-s-z-r~sb-g4sb_test_3c-u&utm_content=g4sb_test_3c&utm_source=google&utm_medium=ep&utm_campaign=google_hpbfooter#!/">Business</a></div>
+                <div class="how-search-works"><a href="https://www.google.com/search/howsearchworks/?fg=1">How Search works</a></div>
+            </div>
+            <div class="carbon-neutral"><a href="https://sustainability.google/commitments/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content=">Carbon neutral since 2007</a></div>
+            <div class="right-footer">
+                <div class="privacy"><a href="https://policies.google.com/privacy?hl=en&fg=1">Privacy</a></div>
+                <div class="terms"><a href="https://policies.google.com/terms?hl=en&fg=1">Terms</a></div>
+                <div class="settings"><a href="">Settings</a></div>
+            </div>
+        </div>
     </footer>
 </html>
