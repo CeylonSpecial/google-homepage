@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
     <style>
+        #google-apps-image {
+          width: 20px;
+          height: auto;
+          filter: greyscale(100%);
+        }
         .header-container {
           font-family: Arial;
           color: black;
@@ -10,7 +15,7 @@
           height: 50px;
           width: 100%;
           display: grid;
-          grid-template-columns: 5% 1% 81% 3% 3% 7%
+          grid-template-columns: 5% 1% 79.5% 3% 3% 3% 4%
         }
         a, a:visited, a:active {
           color: inherit;
@@ -19,7 +24,7 @@
         a:hover {
           text-decoration: underline;
         }
-        #sign-in-button { 
+        #sign-in-button {
           background: #4C8BF5;
           border: 0;
           height: 30px;
@@ -31,16 +36,20 @@
         h1 {
           text-align: center;
         }
-        h2 { 
+        h2 {
           text-align: center;
         }
         #search-box {
-          width: 600px;
+          background-image: url("https://cdn2.hubspot.net/hubfs/4004166/bioticresearch_website_assets/images/search_icon.png");
+          background-repeat: no-repeat;
+          width: 500px;
           border-radius: 50px;
           border-width: 1px;
           height: 40px;
           border-color: #d9d9d9;
           border-style: solid;
+          filter: grayscale(100%);
+          padding-left: 40px;
         }
         #search-box:focus {
           outline: none;
@@ -122,6 +131,7 @@
             <div></div>
             <div class="gmail"><a href="https://mail.google.com/mail/u/0/?ogbl#inbox">Gmail</a></div>
             <div class="images"><a href="https://www.google.com/imghp?hl=en&authuser=0&ogbl">Images</a></div>
+            <div class="google-apps"><img src="https://www.pngkey.com/png/detail/207-2070054_grid-menu-gallery-set-collection-android-interface-google.png" id="google-apps-image"></div>
             <div class="sign-in"><button type="submit" id="sign-in-button">Sign In</button>
         </div>
     </header>
@@ -151,4 +161,3 @@
             </div>
         </div>
     </footer>
-</html>
