@@ -1,5 +1,8 @@
 About:
-This was was my very first project in my coursework from The Odin Project. The assignment was to recreate the Google homepage to the best of my abilities (without inspecting the actual page) using HTML and CSS.
+This was was my very first project in my coursework from The Odin Project.
+
+Assignment:
+Recreate the Google homepage to the best of my abilities (without inspecting the actual page) using HTML and CSS.
 
 Objectives:
 -build my first web page/basic form
